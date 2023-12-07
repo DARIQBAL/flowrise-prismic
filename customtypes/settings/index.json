@@ -6,6 +6,13 @@
   "status": true,
   "json": {
     "Main": {
+      "site_title": {
+        "type": "Text",
+        "config": {
+          "label": "site title",
+          "placeholder": ""
+        }
+      },
       "meta_description": {
         "type": "Text",
         "config": {
@@ -42,13 +49,6 @@
               }
             }
           }
-        }
-      },
-      "site_title": {
-        "type": "Text",
-        "config": {
-          "label": "site title",
-          "placeholder": ""
         }
       }
     }

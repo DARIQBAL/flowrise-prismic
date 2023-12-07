@@ -1,7 +1,11 @@
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { createClient } from '@/prismicio'
+import { createClient } from '@/prismicio';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+// import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,15 +13,15 @@ const inter = Inter({ subsets: ['latin'] })
 
 export async function generateMetadata(): Promise<Metadata> {
  const client = createClient();
- const page  = await client.getSingle("settings");
+ const settings  = await client.getSingle("settings");
  
   return {
-    title: page.data.site_title,
-    description: page.data.meta_description || "flowrise description fallback",
+    title: settings.data.site_title[0].text || "fallback site title",
+    description: settings.data.meta_description || "flowrise description fallback",
     openGraph: {
-      images: [page.data.og_image.url || ""],
+      images: [settings.data.og_image.url || ""],
     },
-  }
+  };
 }
 
 
@@ -30,9 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>Header part</header>
+        <Header />
         {children}
-        <footer>footer part</footer>
+        <Footer />
+        
         </body>
     </html>
   )
