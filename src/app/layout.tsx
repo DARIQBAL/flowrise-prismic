@@ -3,8 +3,6 @@ import { Nunito, Nunito_Sans } from 'next/font/google'
 import clsx from 'clsx';
 import './globals.css'
 import { createClient } from '@/prismicio';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 
 const nunito = Nunito({
@@ -27,11 +25,11 @@ export async function generateMetadata(): Promise<Metadata> {
  
   return {
     title: settings.data.site_title || "fallback site title",
-    description: settings.data.meta_description || "flowrise description fallback",
+    description: settings.data.meta_descirption || "flowrise description fallback",
     openGraph: {
-      images: [settings.data.og_image.url || ""],
+      images: [settings.data.og_image.url || "fallback image"],
     },
-  };
+  }
 }
 
 
@@ -44,11 +42,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}>
       <body>
-        {/* <Header /> */}
+        <header>this is header</header>
         {children}
-        {/* <Footer /> */}
-        
+        <footer>this is footer</footer>
         </body>
     </html>
-  )
+  );
 }
