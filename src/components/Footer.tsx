@@ -12,7 +12,7 @@ export default async function Footer()
         <Link href="/">
         {settings.data.site_title}
         </Link>
-        <p>@{(new Date().getFullYear)} {settings.data.site_title}</p>
+        <p> {settings.data.site_title}</p>
         <nav>
             <ul>
             {settings.data.navigation.map(({link,label})=>(

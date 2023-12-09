@@ -8,8 +8,10 @@ export default async function Header() {
     const settings  = await client.getSingle("settings");
     return 
     (
+    
     <header>
-        <Link href="/">
+        hello
+        {/* <Link href="/">
         {settings.data.site_title}
         </Link>
         <nav>
@@ -20,7 +22,8 @@ export default async function Header() {
                 </li>
                 ))}
             </ul>
-        </nav> 
+        </nav>  */}
     </header>
+    
     );
 }
