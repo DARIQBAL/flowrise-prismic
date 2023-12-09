@@ -9,21 +9,21 @@
       "site_title": {
         "type": "Text",
         "config": {
-          "label": "site title",
+          "label": "Site Title",
           "placeholder": ""
         }
       },
-      "meta_description": {
+      "meta_descirption": {
         "type": "Text",
         "config": {
-          "label": "Meta Description",
+          "label": "Meta Descirption",
           "placeholder": ""
         }
       },
       "og_image": {
         "type": "Image",
         "config": {
-          "label": "OG image",
+          "label": "OG Image",
           "constraint": {},
           "thumbnails": []
         }

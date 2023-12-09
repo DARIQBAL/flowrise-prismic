@@ -16,12 +16,16 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-     <PrismicRichText field={slice.primary.heading} />
+     <PrismicRichText field={slice.primary.heading} components={{
+      heading1: ({children}) =>(
+        <h1 className="text-7xl font-bold color-red-950">{children}</h1>
+      )
+     }}/>
      <PrismicRichText field={slice.primary.body} />
      <PrismicNextLink field={slice.primary.button_link}>
       {slice.primary.button_text}
       </PrismicNextLink>
-     <PrismicNextImage field={slice.primary.image} />
+     <PrismicNextImage field={slice.primary.image}  className="image-fluid"/>
 
     </section>
   );
