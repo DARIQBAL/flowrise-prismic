@@ -25,22 +25,8 @@
 						"icon",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "clover",
-							"type": "Select"
-						}
-					],
-					[
-						"title",
-						{
-							"__TYPE__": "StructuredTextContent",
-							"value": [
-								{
-									"type": "heading3",
-									"content": {
-										"text": "Enjoy"
-									}
-								}
-							]
+							"type": "Select",
+							"value": "calender"
 						}
 					],
 					[
@@ -51,8 +37,26 @@
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Enim dolore laborum minim cupidatat laborum ut cupidatat eu sint officia fugiat esse non esse."
-									}
+										"text": "Create task schedules synced to your natural energy peaks and troughs.",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Scheduling",
+										"spans": []
+									},
+									"direction": "ltr"
 								}
 							]
 						}
@@ -67,23 +71,7 @@
 						{
 							"__TYPE__": "FieldContent",
 							"type": "Select",
-							"value": "calender"
-						}
-					],
-					[
-						"title",
-						{
-							"__TYPE__": "StructuredTextContent",
-							"value": [
-								{
-									"type": "heading3",
-									"content": {
-										"text": "calender heading",
-										"spans": []
-									},
-									"direction": "ltr"
-								}
-							]
+							"value": "bargraph"
 						}
 					],
 					[
@@ -94,7 +82,113 @@
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "calender body Enim dolore laborum minim cupidatat laborum ut cupidatat eu sint officia fugiat esse non esse.",
+										"text": "Track your productivity trends with comprehensive data and insights.",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Analytics",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Select",
+							"value": "clover"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Incorporate wellness practices into your daily plan with reminders for meditation, hydration, and more.",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Integrations",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Select",
+							"value": "hourglass"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Use the built-in Pomodoro timer for focused work sessions with customizable intervals.",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Focus Timer",
 										"spans": []
 									},
 									"direction": "ltr"
