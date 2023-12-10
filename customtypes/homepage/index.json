@@ -18,6 +18,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "text_withimage": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            },
             "features": {
               "type": "SharedSlice"
             },
