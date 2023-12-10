@@ -533,6 +533,121 @@ export type TestimonialsSlice = prismic.SharedSlice<
   TestimonialsSliceVariation
 >;
 
+/**
+ * Primary content in *TextWithimage → Primary*
+ */
+export interface TextWithimageSliceDefaultPrimary {
+  /**
+   * Heading field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Body field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Image field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for TextWithimage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithimageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextWithimageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *TextWithimage → Primary*
+ */
+export interface TextWithimageSliceImageRightPrimary {
+  /**
+   * Heading field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Body field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Image field in *TextWithimage → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_withimage.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Image Right variation for TextWithimage Slice
+ *
+ * - **API ID**: `imageRight`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithimageSliceImageRight = prismic.SharedSliceVariation<
+  "imageRight",
+  Simplify<TextWithimageSliceImageRightPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextWithimage*
+ */
+type TextWithimageSliceVariation =
+  | TextWithimageSliceDefault
+  | TextWithimageSliceImageRight;
+
+/**
+ * TextWithimage Shared Slice
+ *
+ * - **API ID**: `text_withimage`
+ * - **Description**: TextWithimage
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithimageSlice = prismic.SharedSlice<
+  "text_withimage",
+  TextWithimageSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -568,6 +683,12 @@ declare module "@prismicio/client" {
       TestimonialsSliceDefaultItem,
       TestimonialsSliceVariation,
       TestimonialsSliceDefault,
+      TextWithimageSlice,
+      TextWithimageSliceDefaultPrimary,
+      TextWithimageSliceImageRightPrimary,
+      TextWithimageSliceVariation,
+      TextWithimageSliceDefault,
+      TextWithimageSliceImageRight,
     };
   }
 }
