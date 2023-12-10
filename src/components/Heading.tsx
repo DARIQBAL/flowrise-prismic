@@ -12,7 +12,7 @@ export default  function heading({
     className,
     children,
     size = "lg"
-}:HeadingProps)
+}: HeadingProps)
 {
     return(
         <Comp className={clsx("text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-slate-700",

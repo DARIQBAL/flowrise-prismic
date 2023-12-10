@@ -10,10 +10,11 @@ import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismic
 const components: JSXMapSerializer = {
 
   heading1:({children})=> 
-        (<Heading as="h1" size="xl" className="md:mb-8 mb-4 mt-12 first:mt-0 last:mb-0">
+        (<Heading as="h1" size="md" className="md:mb-8 mb-4 mt-12 first:mt-0 last:mb-0">
           {children}
           </Heading>),
-  paragraph:({children})=> (<p className="text-2xl text-center font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 max-w-md">
+  paragraph:({children})=> 
+  (<p className="text-2xl text-center font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 max-w-md">
   {children}</p>
 ),
 
